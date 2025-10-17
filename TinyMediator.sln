@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyMediator", "TinyMediator\TinyMediator.csproj", "{D15CED9D-EF29-4B25-B121-FDA2B85904B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C8D5274F-AC00-46C7-1F8D-E88E81087A52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{17139A99-0899-4200-8A47-05AC65F33A65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D15CED9D-EF29-4B25-B121-FDA2B85904B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15CED9D-EF29-4B25-B121-FDA2B85904B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15CED9D-EF29-4B25-B121-FDA2B85904B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15CED9D-EF29-4B25-B121-FDA2B85904B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03D4B6BF-D9FD-44CD-9621-7A85DEA04B9E}
+	EndGlobalSection
+EndGlobal
