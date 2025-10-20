@@ -46,13 +46,31 @@ namespace TinyMediator.DependencyInjection
             var behaviorOpen = typeof(IPipelineBehavior<,>);
             foreach (var impl in types)
             {
+                if (impl.IsAbstract || impl.IsInterface) continue;
+
                 foreach (var itf in impl.GetInterfaces())
                 {
-                    if (itf.IsGenericType && itf.GetGenericTypeDefinition() == handlerOpen)
-                        services.Add(new ServiceDescriptor(itf, impl, opts.HandlerLifetime));
-                    
-                    if (itf.IsGenericType && itf.GetGenericTypeDefinition() == behaviorOpen)
-                        services.Add(new ServiceDescriptor(itf, impl, opts.BehaviorLifetime));
+                    if (!itf.IsGenericType) continue;
+
+                    var def = itf.GetGenericTypeDefinition();
+
+                    // Handlers
+                    if (def == handlerOpen)
+                    {
+                        // 구현이 오픈 제네릭이면: 서비스도 오픈으로 등록
+                        // (예: GenericHandler<TReq,TRes> : IRequestHandler<TReq,TRes>)
+                        var serviceType = impl.IsGenericTypeDefinition ? handlerOpen : itf;
+                        services.Add(new ServiceDescriptor(serviceType, impl, opts.HandlerLifetime));
+                    }
+
+                    // Behaviors
+                    if (def == behaviorOpen)
+                    {
+                        // 비헤이비어는 보통 오픈 제네릭 구현(LoggingBehavior<,>)이므로,
+                        // 구현이 오픈이면 서비스 타입은 반드시 typeof(IPipelineBehavior<,>)로 등록해야 함.
+                        var serviceType = impl.IsGenericTypeDefinition ? behaviorOpen : itf;
+                        services.Add(new ServiceDescriptor(serviceType, impl, opts.BehaviorLifetime));
+                    }
                 }
             }
 

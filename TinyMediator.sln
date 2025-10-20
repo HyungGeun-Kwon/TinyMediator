@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{17139A99
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyMediator.Tests", "Tests\TinyMediator.Tests\TinyMediator.Tests.csproj", "{43E95995-5D87-4AFC-BEA4-96480A263036}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyMediator.Sample", "TinyMediator.Sample\TinyMediator.Sample.csproj", "{919A3277-6180-4E44-BA88-2281A43CAFB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{43E95995-5D87-4AFC-BEA4-96480A263036}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E95995-5D87-4AFC-BEA4-96480A263036}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E95995-5D87-4AFC-BEA4-96480A263036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919A3277-6180-4E44-BA88-2281A43CAFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919A3277-6180-4E44-BA88-2281A43CAFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919A3277-6180-4E44-BA88-2281A43CAFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919A3277-6180-4E44-BA88-2281A43CAFB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{43E95995-5D87-4AFC-BEA4-96480A263036} = {17139A99-0899-4200-8A47-05AC65F33A65}
+		{919A3277-6180-4E44-BA88-2281A43CAFB5} = {C8D5274F-AC00-46C7-1F8D-E88E81087A52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03D4B6BF-D9FD-44CD-9621-7A85DEA04B9E}
